@@ -1,0 +1,84 @@
+@import "../assets/styles/variables.less";
+
+.image {
+	background-color: @light-pink;
+	height: 200px;
+	border-radius: 5px;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+}
+
+.image img {
+	max-height: 200px;
+	max-width: 100%;
+}
+
+.colContent {
+}
+
+.colContent:hover {
+	
+}
+
+.lineOne {
+	width: 50%;
+	height: 1em;
+	margin-top: 5px;
+	background-color: @light-grey;
+	border-radius: 5px;
+}
+
+
+.lineTwo {
+	width: 65%;
+	min-height: 1em;
+	margin-top: 5px;
+	background-color: @light-grey;
+	border-radius: 5px;
+	padding-bottom: 10px;
+}
+
+.loaded *{
+	background: none;
+	border-radius: 0;
+}
+
+.ImageLoader {
+	border-bottom: 1px solid @light-grey;
+}
+
+@media (max-width: @desktop-min-width) {
+	.imageLoaderRow:first-of-type {
+	  margin-top: 30px;
+	}
+	.ImageLoader {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid @light-grey;
+	}
+}
+
+@media (min-width: @desktop-min-width) {
+	.imageLoaderRow {
+		padding: 20px;
+		border-bottom: 1px solid @light-grey;
+	}
+	.imageLoaderRow:first-of-type {
+		margin-top: 50px;
+	}
+	.ImageLoader {
+		border: 0;
+	}
+
+	.ImageLoader.loading {
+		margin-top: 80px;
+	}
+}
+
+.noResultsContainer {
+	display: grid;
+	justify-items: center;
+}

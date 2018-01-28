@@ -1,0 +1,144 @@
+@import "../assets/styles/variables.less";
+
+@right-pos:                 -20px;
+@triangle-height:						20px;
+@triangle-width:						20px;
+
+.SingleMessage {
+	margin-bottom: 20px;
+}
+
+.SingleMessage * {
+	text-align: left !important;
+}
+
+.SingleMessage .messageBox {
+	position: relative;
+	border: 1px solid @light-grey;
+	min-height: 100px;
+}
+
+.SingleMessage.light .messageBox {
+}
+
+.SingleMessage.dark .messageBox {
+	background-color: @lighter-grey;
+}
+
+.triangle *{
+	position: absolute !important;
+	width: 0 !important; 
+	height: 0 !important;
+	right: @right-pos; 
+}
+
+.SingleMessage .messageBox .triangle .left {
+	top: -1px;
+	border-bottom: @triangle-height solid white; 
+	border-right: @triangle-width solid white;
+}
+
+.SingleMessage .messageBox .triangle .top {
+	top: -1px;
+	border-bottom: 1px solid @light-grey; 
+	border-left: @triangle-width solid @light-grey;
+}
+
+.SingleMessage .messageBox .triangle .bottom {
+	top: -1px;
+	border-top: @triangle-height solid transparent; 
+	border-right: @triangle-width solid @light-grey;
+}
+
+.SingleMessage .messageBox .triangle .bottomCover {
+	top: 0;
+	border-top: @triangle-height solid transparent; 
+	border-right: @triangle-width solid white;
+}
+
+.SingleMessage.light .messageBox .triangle * {
+	right: unset;
+	left: @right-pos; 
+}
+
+.SingleMessage.light .messageBox .triangle .left {
+}
+
+.SingleMessage.light .messageBox .triangle .top {
+}
+
+.SingleMessage.light .messageBox .triangle .bottom {
+	border-right: unset;
+	border-left: @triangle-width solid @light-grey;
+}
+
+.SingleMessage.light .messageBox .triangle .bottomCover {
+	border-right: unset;
+	border-left: @triangle-width solid white;
+}
+
+.SingleMessage.dark .messageBox .triangle .left {
+}
+
+.SingleMessage.dark .messageBox .triangle .top {
+}
+
+.SingleMessage.dark .messageBox .triangle .bottoms {
+}
+
+.SingleMessage.dark .messageBox .triangle .bottom {
+	background-color: @lighter-grey;
+}
+
+.SingleMessage.dark .messageBox .triangle .bottomCover {
+}
+
+.SingleMessage.dark .messageBox .triangle .bottomCoverCovers {
+	right: ~"calc(@{right-pos} - 1px)";
+	top: 0;
+	border-top: ~"calc(@{@triangle-height} + 1px)" solid transparent; 
+	border-right: ~"calc(@{@triangle-width} + 1px)" solid white;
+}
+
+.SingleMessage img {
+	border-radius: 100%;
+	height: 80px;
+	width: 80px;
+	object-fit: cover;
+	right: -90px;
+	top: 0;
+	position: absolute;
+}
+
+.SingleMessage.light img {
+	right: unset;
+	left: -90px;
+}
+
+.SingleMessage .text {
+	padding: 20px;
+}
+
+.SingleMessage .text *{
+	border: none !important;
+}
+
+.SingleMessage .date {
+	padding: 10px;
+	padding-left: 20px;
+}
+
+.SingleMessage .messageBox textarea{
+	width: 100% !important;
+}
+
+.singleMessageForm {
+}
+
+
+.singleMessageForm .btn {
+	background-color: @dark-pink;
+	margin: 10px 30px;
+	border-radius: 10% !important;
+	color: white;
+}

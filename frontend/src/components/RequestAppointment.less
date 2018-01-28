@@ -1,0 +1,48 @@
+@import "../assets/styles/variables.less";
+
+.RequestAppointment *{
+	text-align: left !important;
+}
+
+.RequestAppointment .row{
+	margin-bottom: 20px;
+}
+
+.pickerValue {
+	display: inline;
+}
+
+.pickerLabel {
+	display: grid;
+	align-items: center;
+	justify-items: start;
+}
+
+.locationPickerButtons .btn{
+	border: 1px solid @light-pink;
+	margin-right: 10px !important;
+}
+
+.locationPickerButtons .btn:hover{
+	background-color: @light-pink !important;
+}
+
+.locationPicker input {
+	border-radius: 0;
+	border: 1px solid @light-grey;
+}
+
+.locationPicker.disabled input {
+	cursor: not-allowed;
+}
+
+.row.sendRequest * {
+	text-align: center !important;
+}
+
+.row.sendRequest .btn {
+	background-color: @dark-pink;
+	color: white;
+	border-radius: 10%;
+	padding: 10px;
+}

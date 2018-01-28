@@ -1,0 +1,8 @@
+var path = require("path");
+
+module.exports = {
+  "config": path.resolve("./.sequelizeCli.js"),
+  "migrations-path": path.resolve("./build/shared/migrations/"),
+  "models-path": path.resolve("./build/shared/models/"),
+  "seeders-path": path.resolve("./build/shared/seeders/"),
+};

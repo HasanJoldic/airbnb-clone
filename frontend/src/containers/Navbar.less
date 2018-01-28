@@ -1,0 +1,74 @@
+@import "../assets/styles/variables.less";
+
+.searchFieldAndMenu {
+	grid-area: searchFieldAndMenu;
+	display: grid;
+	align-items: center;
+}
+
+.ChooseCityInputField {
+	grid-area: searchField;
+}
+
+.navButtonsMenu {
+	grid-area: menu;
+	justify-self: end;
+}
+
+.NavButtons {
+	grid-area: buttons;
+	justify-self: end;
+}
+
+.Navbar-container {
+	display: grid;
+	
+}
+
+@media (min-width: @desktop-min-width) { 
+	.Navbar-container {
+		padding-top: 20px;
+		padding-right: 40px;
+		border-bottom: 1px solid @light-grey;
+		padding-bottom: 10px;
+		grid-gap: 0;
+		grid-template-columns: 1fr 3fr 2fr 3fr;
+		grid-template-areas: ". searchFieldAndMenu .  buttons";
+	}
+	.searchFieldAndMenu {
+		grid-template-areas: "searchField";
+	}
+	.navButtonsMenu {
+		display: none;
+	}
+	.NavButtonsMobile {
+		display: none;
+	}
+}
+
+@media (max-width: @desktop-min-width) { 
+	.Navbar-container {
+		grid-gap: 0;
+		grid-template-areas: "searchFieldAndMenu" "buttons";
+	}
+	.searchFieldAndMenu {
+		grid-template-columns: 80% 10% 10%;
+		grid-template-areas: 
+			"searchField . menu";
+	}
+	.ChooseCityInputField {
+	}
+	.NavButtons {
+		display: none;
+	}
+	.NavButtonsMobile {
+		display: grid;
+		grid-template-columns: 100%;
+		justify-items: center;
+	}
+}
+
+.NavButtons {
+	display: grid;
+	align-items: center;
+}

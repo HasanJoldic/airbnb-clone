@@ -1,0 +1,91 @@
+@import "../assets/styles/variables.less";
+
+.carouselImageContainerContainer .unsetAll a {
+	all: unset;
+}
+
+.carouselImageContainerContainer a:hover {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.carouselImageContainer {
+	background-color: @light-grey !important;
+	height: 200px;
+	width: 100%;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	position: relative;
+	border-radius: 5px !important;
+}
+
+.carouselImageContainer.profile {
+	height: 500px;
+}
+
+@media (max-width: @desktop-min-width) {
+	.carouselImageContainer {
+		max-width: 500px;
+	}
+}
+
+.carouselImageContainer img {
+	max-width: 100%;
+}
+
+.carouselImageContainer * {
+	background-color: transparent !important;
+}
+
+.carouselImageContainer:hover .iconContainer.left {
+	background: linear-gradient(to right, @black-gradient-start , @black-gradient-end);
+}
+
+.carouselImageContainer:hover .iconContainer.right {
+	background: linear-gradient(to left, @black-gradient-start , @black-gradient-end);
+}
+
+.iconContainer {
+	position: absolute;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	height: 100%;
+	padding: 20px;
+	border-radius: 5px !important;
+}
+
+.iconContainer:hover {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.iconContainer.left{
+	left: 0;
+}
+
+.iconContainer.right {
+	right: 0;
+}
+
+.carouselImageContainer .fa {
+	color: white;
+	width: 30px;
+}
+
+.clickImage {
+	position: absolute;
+	height: 100%;
+	left: 70px;
+	right: 70px;
+}
+
+.clickImage:hover {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.homepageThumbnailText {
+	width: 100%;
+}

@@ -1,0 +1,18 @@
+@import "../assets/styles/variables.less";
+
+.appContent {
+	min-height: 100vh;
+}
+
+@media (max-width: @desktop-min-width) { 
+	.NavButtonsMobile {
+		display: grid;
+		grid-template-columns: 100%;
+		justify-items: stretch;
+  		animation-duration: 0.2s;
+  		animation-name: fadeInDown;
+  		top: 0;
+  		width: 100%;
+  		z-index: 2;
+	}
+}
